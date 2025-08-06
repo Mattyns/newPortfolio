@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+   
+
+    <header class="header__container">
+        <h1 class="header__title">DESENVOLVEDOR WEB</h1>
+        <nav class="header__menu">
+            <a href="#"><i class="bi-github header--icon"></i></a>
+            <i class="bi-brightness-high header--icon"></i>
+            <i class="bi-star-fill header--icon" id="toggle__button--star"></i>
+        </nav>
+    </header>
+
+    <div class="menu__left">
+        <div class="left__container">
+            <a href="#" class="left__home left--link"><i class="bi-house-door left--icon"></i></a>
+            <a href="#" class="left__about left--link"><i class="bi-exclamation-circle left--icon"></i></a>
+            <a href="#" class="left__projects left--link"><i class="bi-folder left--icon"></i></a>
+            <a href="#" class="left__projects left--link"><i class="bi-bullseye left--icon"></i></a>
+        </div>
+        <i class="bi-caret-right-fill menu__left--button"></i>
+    </div>
+
+    <main class="base">
+
+        <section class="profile">
+            <img src="img/eu.jpeg" alt="Representação ilustrada" class="profile__img">
+
+            <div class="profile__present">
+                <p class="present__text">Olá, eu sou <span class="present__text--contrast">Matheus Everton</span></p><p class="profile__text--min">[Também conhecido como Math]</p>
+            </div>
+        </section>
+
+    </main>
+
+
+     <canvas id="canvas"></canvas>
+
+    <script src="script/effect.js"></script>
+    
+</body>
+</html>

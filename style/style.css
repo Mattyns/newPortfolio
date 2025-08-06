@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+:root {
+
+  --cor1:#FC38C8;
+  --cor2:#FC5238;
+  --cor3:#FC3852;
+  --cor4:#D938FC;
+  --cor5:#FC7538;
+  --cor6:#FC8C9B;
+  --cor7:#df85f3;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+ 
+body {
+    background-image: url(../img/space.jpg);
+    background-size: cover;
+    
+    overflow: hidden;
+}
+
+.header__container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.163);
+    padding: 20px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.283);
+    align-items: center;
+}
+
+.header__title {
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.header__menu {
+    border: 1px solid gray;
+    border-radius: 40px;
+    padding: 8px;
+    position: absolute;
+    right: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.header--icon {
+    margin: auto 10px;
+    font-size: 1.2em;
+    color: white;
+
+}
+
+
+
+
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none; /* permite clicar nos elementos abaixo */
+}
+
+
+
+
+
+
+.profile {
+    width: 80%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.profile__img {
+    width: 70%;
+    display: block;
+    margin: auto;
+    border: 2px solid purple;
+    border-radius: 40%;
+}
+
+.profile__present {
+  color: white;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  width: 72%;
+  margin: auto;
+  margin-top: 20px;
+  
+  
+}
+
+.present__text {
+  font-size: 1.5em;
+}
+
+.present__text--contrast {
+  background: linear-gradient(90deg,#FC7538, #D938FC );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Para outros navegadores */
+  background-clip: text;
+  color: transparent;
+}
+
+.profile__text--min {
+  color: var(--cor7);
+  font-size: 1.2em;
+}
+
+.menu__left {
+  top: 15%;
+  left: -45px;
+  width: 40px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  transition: left 1s ease;
+}
+
+.menu__left--button {
+  color: white;
+  font-size: 2em;
+
+}
+
+.left__container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 10px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.left--link {
+  margin: 8px 0px;
+}
+
+.left--icon {
+  font-size: 1.5em;
+  color: #FC38C8;
+
+}
