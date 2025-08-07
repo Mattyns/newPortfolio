@@ -27,11 +27,23 @@ a {
 ul {
     list-style: none;
 }
+
+html, body {
+  height: 100%;
+  overscroll-behavior-y: contain; /* diminui o bounce */
+  
+}
  
 body {
     background-image: url(../img/space.jpg);
     background-size: cover;
     background-attachment: fixed;
+    min-height: 100%;
+    padding-bottom:20px ;
+    background-color: #000; /* ou a cor/fundo desejado */
+    
+    
+    
     
     
 }
@@ -101,7 +113,7 @@ canvas {
 
 .profile {
     z-index: 3;
-    height: 80vh;
+    height: 100vh;
 
 
 }
@@ -218,8 +230,10 @@ canvas {
 }
 
 .about {
-   box-shadow: inset 6px 6px 13px 0px black;
+  box-shadow: inset 6px 6px 13px 0px black;
   padding-top: 20px;
+  
+
 }
 
 .about__title {
