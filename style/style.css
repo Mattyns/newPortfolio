@@ -28,19 +28,19 @@ ul {
     list-style: none;
 }
 
-html, body {
-  height: 100%;
-  overscroll-behavior-y: contain; /* diminui o bounce */
-  
-}
+
  
 body {
     background-image: url(../img/space.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: fixed;
     min-height: 100%;
-    padding-bottom:20px ;
+    
     background-color: #000; /* ou a cor/fundo desejado */
+    
+    
     
     
     
@@ -102,6 +102,8 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   pointer-events: none; /* permite clicar nos elementos abaixo */
 }
