@@ -37,7 +37,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     min-height: 100%;
-    
+    scroll-behavior: smooth;
     background-color: #000; /* ou a cor/fundo desejado */
     
     
