@@ -9,6 +9,7 @@
   --cor5:#FC7538;
   --cor6:#FC8C9B;
   --cor7:#df85f3;
+  --cor8:#240e04;
   
 }
 
@@ -30,17 +31,32 @@ ul {
 body {
     background-image: url(../img/space.jpg);
     background-size: cover;
+    background-attachment: fixed;
     
-    overflow: hidden;
+    
+}
+
+section { 
+  z-index: 3;
+}
+
+div {
+  z-index: 3;
 }
 
 .header__container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.163);
+    backdrop-filter: blur(10px); /* <- aqui está o efeito de desfoque */
+   -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
     padding: 20px;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.283);
     align-items: center;
-    z-index: 3;
+    z-index: 1000;
+    position: sticky;
+    top: 0px;
+
+    
 }
 
 .header__title {
@@ -69,13 +85,12 @@ body {
 
 
 
-
 canvas {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: -1;
   pointer-events: none; /* permite clicar nos elementos abaixo */
 }
 
@@ -85,15 +100,20 @@ canvas {
 
 
 .profile {
+    z-index: 3;
+    height: 80vh;
+
+
+}
+
+.profile--align {
+    
     width: 80%;
     max-width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
-
-
 }
 
 .profile__img {
@@ -158,6 +178,8 @@ canvas {
   flex-direction: column;
   background-color: black;
   padding: 10px;
+  border: 2px solid gray;
+  border-left: none;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -169,4 +191,119 @@ canvas {
   font-size: 1.5em;
   color: #FC38C8;
 
+}
+
+.slogan1 {
+  z-index: 3;
+  
+  background-color: black;
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+  color: white;
+  padding: 10px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.slogan1__text {
+  z-index: 3;
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.about {
+   box-shadow: inset 6px 6px 13px 0px black;
+  padding-top: 20px;
+}
+
+.about__title {
+  text-decoration: underline;
+  text-decoration-color: var(--cor2);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  
+}
+
+.about__text {
+  font-size: 1em;
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.399);
+  padding: 10px;
+
+}
+
+.about__tags {
+  margin-top: 30px;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar para a próxima linha */
+}
+
+.about__tags--card {
+  margin: 5px;
+  background-color: #fc76386b;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.about__timeline {
+  margin-top: 40px;
+}
+
+.timeline__title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--cor2);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+}
+
+.timeline__container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.timeline__card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 25px 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.timeline__year {
+  font-size: 2em;
+  color:#FC5238;
+  background-color: black;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.timeline__desc {
+  position: absolute;
+  right: 0;
+  font-size: 1.1em;
+  color: white;
+  width: 250px;
+  max-height: 70px;
+  white-space: normal; /* garante que possa quebrar */
 }
