@@ -178,7 +178,7 @@ canvas {
   position: fixed;
   align-items: center;
   transition: left 1s ease;
-  z-index: 3;
+  z-index: 1000;
 }
 
 .menu__left--button {
@@ -234,6 +234,7 @@ canvas {
 .about {
   box-shadow: inset 6px 6px 13px 0px black;
   padding-top: 20px;
+  padding-bottom: 20px;
   
 
 }
@@ -322,4 +323,82 @@ canvas {
   width: 250px;
   max-height: 70px;
   white-space: normal; /* garante que possa quebrar */
+}
+
+.projects {
+  padding-top: 60px;
+  z-index: 4;
+  
+}
+
+.projects__title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--cor2);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+  
+}
+
+.projects__text {
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+
+.project__container {
+  background-color: transparent;
+}
+
+.project__card {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #d838fc29;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  
+}
+
+.project__title {
+  text-align: center;
+}
+
+.project__text {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.project__container--img {
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.project__img--capa {
+  height: 100%;
+  background-color: #FC5238;
+  position: relative;
+  z-index: 3;
+}
+
+.project__img--capa:hover {
+  height: 0%;
+  transition: height 1s ease;
+
+}
+
+.project__img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
 }
