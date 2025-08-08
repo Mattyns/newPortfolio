@@ -327,7 +327,9 @@ canvas {
 
 .projects {
   padding-top: 60px;
+  padding-bottom: 80px;
   z-index: 4;
+  box-shadow: inset 6px 6px 13px 0px black;
   
   
 }
@@ -366,6 +368,8 @@ canvas {
   border-radius: 10px;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  backdrop-filter: blur(10px); /* <- aqui está o efeito de desfoque */
+   -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
   
   
   
@@ -439,6 +443,149 @@ capa abandonada por enquanto
   padding: 5px;
 }
 
+.skills {
+  padding-top: 40px;
+  box-shadow: inset 6px 6px 13px 0px black;
+  min-height: 60vh;
+}
+
+.skills__title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--cor2);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+
+}
+
+.skill__text {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.skill__container {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center; /* combina justify-items e align-items */
+  
+  
+}
+
+.skill__card {
+  background-color: #fc52383e;
+  margin: 10px;
+  width: 130px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  backdrop-filter: blur(10px); /* <- aqui está o efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
+
+}
+
+.skill--icon {
+  margin-bottom: 5px;
+  font-size: 1.5em;
+  color: #df85f3;
+}
+
+.skill--name {
+  color: white;
+}
+
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  box-shadow: inset 6px 6px 13px 0px black;
+
+}
+
+.contact__title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--cor2);
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+}
+
+.contact__text {
+  width: 80%;
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact__container {
+  width: 80%;
+  margin: auto;
+  margin-top:40px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #df85f308;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.contact__card {
+  margin: 20px auto;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  
+
+}
+
+.contact--icon {
+  font-size: 1.5em;
+  margin-right: 20px;
+  
+  
+  
+}
+
+.contact__email--icon {
+  color: steelblue;
+}
+
+.contact__local--icon {
+  color: brown;
+}
+
+.contact__github--icon {
+  color: white;
+}
+
+.contact__name {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0.7em;
+  
+}
+
+footer {
+  height: 20vh;
+  background-color: #000;
+}
+
+
+
 @media screen and (min-Width:768px) {
   .header__title {
     font-size: 2em;
@@ -471,6 +618,16 @@ capa abandonada por enquanto
     align-items: center;
   }
   
+  .skill__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .contact__container {
+    width: 70%;
+  }
   
 }
 
@@ -528,6 +685,10 @@ capa abandonada por enquanto
 
 .project__card {
   height: 600px;
+}
+
+.contact__container {
+  width: 50%;
 }
 
 }
