@@ -53,7 +53,7 @@
             <div class="profile--align">
                 <img src="img/eu.jpeg" alt="Representação ilustrada" class="profile__img">
                 <div class="profile__present">
-                    <p class="present__text">Olá, eu sou <span class="present__text--contrast">Matheus Everton</span></p><p class="profile__text--min">[Também conhecido como Math]</p>
+                    <p class="present__text">Olá, eu sou <span class="present__text--contrast">Matheus Everton</span></p><p class="profile__text--min">[Programando com paixão desde 2021.]</p>
 
                     <div class="profile__local">
                         <i class="bi-geo-alt profile__local--icon"></i>
@@ -282,10 +282,10 @@
                     <p class="contact__name">evertins02@gmail.com</p>
                 </div>
 
-                <div class="contact__card">
+                <!--<div class="contact__card">
                     <i class="bi-geo-alt contact--icon contact__local--icon"></i>
                     <p class="contact__name">Brasil</p>
-                </div>
+                </div>-->
 
                 <div class="contact__card">
                     <i class="bi-github contact--icon contact__github--icon"></i>
@@ -293,6 +293,23 @@
                 </div>
 
             </div>
+
+            <form class="contact__form">
+                <label for="f__name" class="form__label">Nome Completo</label>
+                <input type="text" name="f__name" id="f__name" class="f__camp" placeholder="Seu Nome" required>
+
+                <label for="f__email" class="form__label">E-mail</label>
+                <input type="email" name="f__email" id="f__email" class="f__camp" placeholder="example@gmail.com" required>
+
+                <label for="f__phone" class="form__label">Telefone <span class="form__notice">opcional</span></label>
+                <input type="tel" name="f__phone" id="f__phone" class="f__camp" placeholder="11-111111111">
+
+                <label for="f__text" class="form__label">Mensagem <span class="form__notice">opcional</span></label>
+                <textarea name="f__text" id="f__text" class="f__camp" placeholder="Detalhes do Projeto"></textarea>
+
+                <button type="submit" class="contact__form--button">ENVIAR</button>
+                
+            </form>
         </section>
 
         

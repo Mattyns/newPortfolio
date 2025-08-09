@@ -255,6 +255,12 @@ canvas {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+  background-color: #0000004c;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .profile__local--icon {
@@ -555,7 +561,7 @@ capa abandonada por enquanto
 }
 
 .project__link--button {
-  border: 1px solid gray;
+  border: 1px solid white;
   border-radius: 8px;
   background-color: #fc52386e;
   color: white;
@@ -699,6 +705,71 @@ capa abandonada por enquanto
   
 }
 
+.contact__form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: #df85f308;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.form__label {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+.form__notice {
+  color: red;
+  font-size: 0.7em;
+}
+
+.f__camp {
+  padding: 5px;
+  border: none;
+  background-color: #fcfcfc17;
+  border-radius: 10px;
+
+}
+
+#f__text {
+  width: 100%;
+  margin: auto;
+  resize: vertical;     /* permite redimensionar só para cima/baixo */
+  overflow-wrap: break-word; /* evita que o texto quebre o layout */
+}
+
+.f__camp:focus {
+  background-color: #fffffffc;
+  border: 1px solid #FC5238;
+  outline: none;
+}
+
+.f__camp::placeholder {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+.contact__form--button {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #fc52389e;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+
+
 footer {
   height: 20vh;
   background-color: #000;
@@ -756,6 +827,8 @@ footer {
   }
   
 }
+
+
 
 @media screen and (min-Width:1048px) {
 
