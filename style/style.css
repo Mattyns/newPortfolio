@@ -304,6 +304,9 @@ canvas {
 .menu__left--button {
   color: white;
   font-size: 2em;
+  animation-name: shakeY;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
 
 }
 
