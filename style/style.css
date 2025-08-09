@@ -785,6 +785,13 @@ footer {
   
 }
 
+.about__tags {
+  
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .timeline__container {
   display: flex;
   flex-direction: column;
