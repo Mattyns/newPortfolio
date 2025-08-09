@@ -56,6 +56,104 @@ div {
   z-index: 3;
 }
 
+/*estilizar icones*/
+
+i[data-github] {
+  position: relative;
+  cursor: pointer;
+}
+
+i[data-github]::after {
+  content: attr(data-github);
+  position: absolute;
+  bottom: -250%; /* acima do ícone */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FC5238;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+i[data-github]:hover::after {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+i[data-light] {
+  position: relative;
+  cursor: pointer;
+  
+}
+
+i[data-light]::after {
+  content: attr(data-light);
+  position: absolute;
+  bottom: -240%; /* acima do ícone */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FC5238;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  
+}
+
+i[data-light]:hover::after {
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+
+
+i[data-effect] {
+  position: relative;
+  cursor: pointer;
+  
+}
+
+i[data-effect]::after {
+  content: attr(data-effect);
+  position: absolute;
+  bottom: -240%; /* acima do ícone */
+  left: -300%;
+  transform: translateX(-50%);
+  background-color: #FC5238;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  
+}
+
+i[data-effect]:hover::after {
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+
+/*fim da estilização*/
+
 .header__container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.163);
@@ -67,6 +165,7 @@ div {
     z-index: 1000;
     position: sticky;
     top: 0px;
+    height: 70px;
 
     
 }

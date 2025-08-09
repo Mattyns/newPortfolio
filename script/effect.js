@@ -20,6 +20,13 @@ toggleButton.addEventListener('click', () => {
   toggleButton.classList.toggle('bi-star-fill');
   toggleButton.classList.toggle('bi-star');
 
+  // Alternar o valor do atributo data-effect
+  if (toggleButton.dataset.effect === 'Desativar Efeito') {
+    toggleButton.dataset.effect = 'Ativar Efeito';
+  } else {
+    toggleButton.dataset.effect = 'Desativar Efeito';
+  }
+
   // Trocar cor como feedback visual (opcional)
   toggleButton.style.color = starsEnabled ? 'white' : 'gray';
 });
@@ -97,3 +104,42 @@ function showleft() {
 function hideleft() {
   menuLeft.style.left = '-45px'
 }
+
+
+//efeito de digitação 
+
+const texts = ["Desenvolvedor Web", "Matheus Everton"];
+  let currentText = 0;
+  let index = 0;
+  let isDeleting = false;
+  const speed = 100;
+  const eraseSpeed = 50;
+  const delayBetween = 1500;
+
+  function type() {
+    const element = document.getElementById("typing");
+    const text = texts[currentText];
+
+    if (!isDeleting) {
+      element.innerHTML = text.substring(0, index + 1) + '<span class="cursor"></span>';
+      index++;
+      if (index === text.length) {
+        isDeleting = true;
+        setTimeout(type, delayBetween);
+        return;
+      }
+    } else {
+      element.innerHTML = text.substring(0, index - 1) + '<span class="cursor"></span>';
+      index--;
+      if (index === 0) {
+        isDeleting = false;
+        currentText = (currentText + 1) % texts.length;
+      }
+    }
+    
+    setTimeout(type, isDeleting ? eraseSpeed : speed);
+  }
+
+  type();
+
+
