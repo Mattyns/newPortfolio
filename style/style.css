@@ -224,7 +224,7 @@ canvas {
     width: 80%;
     max-width: 400px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -347,8 +347,8 @@ canvas {
 
 .about {
   box-shadow: inset 6px 6px 13px 0px black;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   
 
 }
@@ -394,7 +394,7 @@ canvas {
 }
 
 .about__timeline {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .timeline__title {
@@ -443,8 +443,8 @@ canvas {
 }
 
 .projects {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   z-index: 4;
   box-shadow: inset 6px 6px 13px 0px black;
   
@@ -475,18 +475,20 @@ canvas {
 }
 
 .project__card {
-  height: 90%;
+  height: 100%;
   width: 80%;
   margin: auto;
   margin-top: 40px;
   background-color: #f4eef627;
   padding: 20px;
+  padding-bottom: 80px;
   border: 1px solid gray;
   border-radius: 10px;
   color: white;
   font-family: 'Courier New', Courier, monospace;
   backdrop-filter: blur(10px); /* <- aqui está o efeito de desfoque */
    -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
+   position: relative;
   
   
   
@@ -544,7 +546,8 @@ capa abandonada por enquanto
 
 .project__link {
   display: flex;
-  align-items: center;
+  position: absolute;
+  bottom: 5%;
   justify-content: center;
   margin: auto;
   margin-top: 20px;
@@ -561,8 +564,8 @@ capa abandonada por enquanto
 }
 
 .skills {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   box-shadow: inset 6px 6px 13px 0px black;
   min-height: 60vh;
 }
@@ -625,8 +628,8 @@ capa abandonada por enquanto
 }
 
 .contact {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   box-shadow: inset 6px 6px 13px 0px black;
 
 }
@@ -726,6 +729,7 @@ footer {
   .projects__container {
     display: grid;
    grid-template-columns: 1fr 1fr;
+   gap: 40px 0;
     width: 100%;
   }
 
