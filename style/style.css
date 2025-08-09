@@ -546,8 +546,7 @@ capa abandonada por enquanto
 
 .project__link {
   display: flex;
-  position: absolute;
-  bottom: 5%;
+  
   justify-content: center;
   margin: auto;
   margin-top: 20px;
@@ -738,6 +737,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .project__link {
+    position: absolute;
+  bottom: 5%;
   }
   
   .skill__container {
