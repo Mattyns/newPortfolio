@@ -4,13 +4,32 @@
 
   --cor1:#FC38C8;
   --cor2:#FC5238;
+  --cor2-trans:#fc523839;
   --cor3:#FC3852;
   --cor4:#D938FC;
   --cor5:#FC7538;
   --cor6:#FC8C9B;
   --cor7:#df85f3;
   --cor8:#240e04;
+  --cor-padrão1: white;
+  --cor-padrão1-trans: rgba(255, 255, 255, 0.199);
+  --cor-padrão2: black;
+  --cor-padrão2-trans: rgba(0, 0, 0, 0.406);
   
+}
+
+.light-theme {
+  --cor2:#E3B040;
+  --cor2-trans:#e3af4039;
+  --cor4: #5670A3;
+  --cor1: #8E7D57;
+  --cor-padrão1: black;
+  --cor-padrão1-trans: rgba(0, 0, 0, 0.406);
+  --cor-padrão2: white;
+  --cor-padrão2-trans: rgba(255, 255, 255, 0.199);
+  
+
+  background-image: url(../img/snow.jpg);
 }
 
 * {
@@ -58,6 +77,7 @@ div {
 
 /*estilizar icones*/
 
+/*
 i[data-github] {
   position: relative;
   cursor: pointer;
@@ -66,7 +86,7 @@ i[data-github] {
 i[data-github]::after {
   content: attr(data-github);
   position: absolute;
-  bottom: -240%; /* acima do ícone */
+  bottom: -240%; 
   left: 50%;
   transform: translateX(-50%);
   background-color: #FC5238;
@@ -96,7 +116,7 @@ i[data-light] {
 i[data-light]::after {
   content: attr(data-light);
   position: absolute;
-  bottom: -240%; /* acima do ícone */
+  bottom: -240%; 
   left: 50%;
   transform: translateX(-50%);
   background-color: #FC5238;
@@ -129,7 +149,7 @@ i[data-effect] {
 i[data-effect]::after {
   content: attr(data-effect);
   position: absolute;
-  bottom: -240%; /* acima do ícone */
+  bottom: -240%; 
   left: -300%;
   transform: translateX(-50%);
   background-color: #FC5238;
@@ -151,6 +171,7 @@ i[data-effect]:hover::after {
   pointer-events: auto;
   
 }
+*/
 
 /*fim da estilização*/
 
@@ -233,12 +254,12 @@ canvas {
     width: 70%;
     display: block;
     margin: auto;
-    border: 2px solid #FC5238;
+    border: 2px solid var(--cor2);
     border-radius: 40%;
 }
 
 .profile__present {
-  color: white;
+  color: var(--cor-padrão1);
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
@@ -255,7 +276,7 @@ canvas {
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  background-color: #0000004c;
+  background-color: var(--cor-padrão2-trans);
   padding: 5px;
   border: 1px solid gray;
   border-radius: 40px;
@@ -264,7 +285,7 @@ canvas {
 }
 
 .profile__local--icon {
-  color: #FC5238;
+  color: var(--cor2);
   font-size: 1.5em;
   margin-right: 10px;
 }
@@ -276,7 +297,7 @@ canvas {
 }
 
 .present__text--contrast {
-  background: linear-gradient(90deg,#FC7538, #D938FC );
+  background: linear-gradient(90deg, var(--cor2), var(--cor4) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -286,7 +307,7 @@ canvas {
 }
 
 .profile__text--min {
-  color: #D938FC;
+  color: var(--cor4);
   font-size: 1.2em;
 }
 
@@ -302,7 +323,7 @@ canvas {
 }
 
 .menu__left--button {
-  color: white;
+  color: var(--cor-padrão1);
   font-size: 2em;
   animation-name: shakeY;
   animation-duration: 1.5s;
@@ -333,11 +354,11 @@ canvas {
 .slogan1 {
   z-index: 3;
   
-  background-color: black;
+  background-color: var(--cor-padrão2);
   border: 1px solid gray;
   border-left: none;
   border-right: none;
-  color: white;
+  color: var(--cor-padrão1);
   padding: 10px;
   height: 300px;
   display: flex;
@@ -367,7 +388,7 @@ canvas {
   text-decoration-color: var(--cor2);
   text-decoration-thickness: 6px;
   text-underline-offset: 4px;
-  color: white;
+  color: var(--cor-padrão1);
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
@@ -380,8 +401,8 @@ canvas {
   margin: auto;
   margin-top: 20px;
   font-family: 'Courier New', Courier, monospace;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.399);
+  color: var(--cor-padrão1);
+  background-color: var(--cor-padrão2-trans);
   padding: 10px;
 
 }
@@ -395,10 +416,10 @@ canvas {
 
 .about__tags--card {
   margin: 5px;
-  background-color: #fc523892;
-  color: white;
+  background-color: var(--cor2-trans);
+  color: var(--cor-padrão1);
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid var(--cor-padrão1);
   border-radius: 5px;
 }
 
@@ -407,7 +428,7 @@ canvas {
 }
 
 .timeline__title {
-  color: white;
+  color: var(--cor-padrão1);
   font-size: 2em;
   text-align: center;
   text-decoration: underline;
@@ -432,8 +453,8 @@ canvas {
 
 .timeline__year {
   font-size: 2em;
-  color:#FC5238;
-  background-color: rgba(0, 0, 0, 0.472);
+  color:var(--cor2);
+  background-color: var(--cor-padrão2-trans);
   padding: 5px;
   border: 1px solid gray;
   border-radius: 10px;
@@ -445,7 +466,7 @@ canvas {
   position: absolute;
   right: 0;
   font-size: 90%;
-  color: white;
+  color: var(--cor-padrão1);
   width: 60%;
   max-height: 70px;
   white-space: normal; /* garante que possa quebrar */
@@ -461,7 +482,7 @@ canvas {
 }
 
 .projects__title {
-  color: white;
+  color: var(--cor-padrão1);
   font-size: 2em;
   text-align: center;
   text-decoration: underline;
@@ -475,7 +496,7 @@ canvas {
   margin-top: 20px;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
-  color: white;
+  color: var(--cor-padrão1);
   font-size: 1.2em;
 }
 
@@ -488,7 +509,7 @@ canvas {
   width: 80%;
   margin: auto;
   margin-top: 40px;
-  background-color: #f4eef627;
+  background-color: var(--cor-padrão1-trans);
   padding: 20px;
   padding-bottom: 80px;
   border: 1px solid gray;
@@ -514,7 +535,7 @@ canvas {
 
 .project__date {
   font-size: 1.2em;
-  color: #FC7538;
+  color: var(--cor2);
   width: 80%;
   margin: auto;
   text-align: center;
@@ -566,7 +587,7 @@ capa abandonada por enquanto
 .project__link--button {
   border: 1px solid white;
   border-radius: 8px;
-  background-color: #fc52386e;
+  background-color: var(--cor2-trans);
   color: white;
   padding: 5px;
 }
@@ -579,7 +600,7 @@ capa abandonada por enquanto
 }
 
 .skills__title {
-  color: white;
+  color: var(--cor-padrão1);
   font-size: 2em;
   text-align: center;
   text-decoration: underline;
@@ -595,7 +616,7 @@ capa abandonada por enquanto
   margin: auto;
   margin-top: 20px;
   font-family: 'Courier New', Courier, monospace;
-  color: white;
+  color: var(--cor-padrão1);
 }
 
 .skill__container {
@@ -610,7 +631,7 @@ capa abandonada por enquanto
 }
 
 .skill__card {
-  background-color: #d838fc14;
+  background-color: var(--cor-padrão2-trans);
   margin: 10px;
   width: 130px;
   height: 80px;
@@ -628,11 +649,11 @@ capa abandonada por enquanto
 .skill--icon {
   margin-bottom: 5px;
   font-size: 1.5em;
-  color: #FC5238;
+  color: var(--cor2);
 }
 
 .skill--name {
-  color: white;
+  color: var(--cor-padrão1);
 }
 
 .contact {
@@ -643,7 +664,7 @@ capa abandonada por enquanto
 }
 
 .contact__title {
-  color: white;
+  color: var(--cor-padrão1);
   font-size: 2em;
   text-align: center;
   text-decoration: underline;
@@ -654,7 +675,7 @@ capa abandonada por enquanto
 
 .contact__text {
   width: 80%;
-  color: white;
+  color:var(--cor-padrão1);
   margin: auto;
   margin-top: 20px;
   text-align: center;
@@ -667,7 +688,7 @@ capa abandonada por enquanto
   border: 1px solid gray;
   border-radius: 20px;
   padding: 10px;
-  background-color: #df85f308;
+  background-color: var(--cor-padrão2-trans);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -698,11 +719,11 @@ capa abandonada por enquanto
 }
 
 .contact__github--icon {
-  color: white;
+  color: var(--cor-padrão1);
 }
 
 .contact__name {
-  color: white;
+  color: var(--cor-padrão1);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 0.7em;
   
@@ -717,13 +738,13 @@ capa abandonada por enquanto
   padding: 20px;
   border: 1px solid gray;
   border-radius: 20px;
-  background-color: #df85f308;
+  background-color: var(--cor-padrão2-trans);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .form__label {
-  color: white;
+  color: var(--cor-padrão1);
   font-family: 'Courier New', Courier, monospace;
   margin-top: 20px;
   margin-bottom: 6px;
@@ -737,7 +758,7 @@ capa abandonada por enquanto
 .f__camp {
   padding: 5px;
   border: none;
-  background-color: #fcfcfc17;
+  background-color: var(--cor-padrão1-trans);
   border-radius: 10px;
 
 }
@@ -751,7 +772,7 @@ capa abandonada por enquanto
 
 .f__camp:focus {
   background-color: #fffffffc;
-  border: 1px solid #FC5238;
+  border: 1px solid var(--cor2);
   outline: none;
 }
 
@@ -764,9 +785,9 @@ capa abandonada por enquanto
   width: 50%;
   margin: auto;
   margin-top: 20px;
-  background-color: #fc52389e;
-  border: 1px solid white;
-  color: white;
+  background-color: var(--cor2-trans);
+  border: 1px solid var(--cor-padrão1-trans);
+  color: var(--cor-padrão1);
   padding: 10px;
   border-radius: 20px;
 }
@@ -775,7 +796,7 @@ capa abandonada por enquanto
 
 footer {
   height: 20vh;
-  background-color: #000;
+  background-color: var(--cor-padrão2);
 }
 
 
