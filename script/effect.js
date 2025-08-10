@@ -285,3 +285,12 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//flip de imagem
+
+const flipCard = document.querySelector('.flip-card');
+
+flipCard.addEventListener('click', () => {
+  flipCard.classList.toggle('flipped');
+});
+
+

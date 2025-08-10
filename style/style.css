@@ -1,10 +1,25 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'logo1';
+  src: url(../fonts/logo10.ttf);
+}
+
+@font-face {
+  font-family: 'text1';
+  src: url(../fonts/text1.otf);
+}
+
+@font-face {
+  font-family: 'contrast1';
+  src: url(../fonts/contrast1.ttf);
+}
+
 :root {
 
   --cor1:#FC38C8;
   --cor2:#FC5238;
-  --cor2-trans:#fc523839;
+  --cor2-trans:hsla(8, 97%, 60%, 0.176);
   --cor3:#FC3852;
   --cor4:#D938FC;
   --cor5:#FC7538;
@@ -14,22 +29,29 @@
   --cor-padrão1: white;
   --cor-padrão1-trans: rgba(255, 255, 255, 0.199);
   --cor-padrão2: black;
-  --cor-padrão2-trans: rgba(0, 0, 0, 0.406);
+  --cor-padrão2-trans: rgba(0, 0, 0, 0.199);
+  --cor-padrão2-trans2: rgba(0, 0, 0, 0.472);
+  --cor-form:rgb(172, 159, 159);
   
+
+  --font-logo1: 'logo1';
+  --font-text1: 'text1';
+  --font-contrast: 'contrast1'
 }
 
 .light-theme {
-  --cor2:#E3B040;
-  --cor2-trans:#e3af4039;
-  --cor4: #5670A3;
+  --cor2:#E3A639;
+  --cor2-trans:hsla(38, 75%, 56%, 0.176);
+  --cor4: #4B5663;
   --cor1: #8E7D57;
   --cor-padrão1: black;
   --cor-padrão1-trans: rgba(0, 0, 0, 0.406);
   --cor-padrão2: white;
   --cor-padrão2-trans: rgba(255, 255, 255, 0.199);
+  --cor-padrão2-trans: rgba(255, 255, 255, 0.472);
   
 
-  background-image: url(../img/snow.jpg);
+  background-image: url(../img/snow3.jpg);
 }
 
 * {
@@ -193,7 +215,7 @@ i[data-effect]:hover::after {
 
 .header__title {
     font-size: 4.5vw;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:var(--font-logo1), 'Courier New', Courier, monospace;
     color: white;
 }
 
@@ -256,12 +278,69 @@ canvas {
     margin: auto;
     border: 2px solid var(--cor2);
     border-radius: 40%;
+    
 }
+
+.profile__img--2 {
+  border: none;
+  
+  
+}
+
+.flip-card {
+  width: 150px; /* ou a largura da sua imagem */
+  height: 160px; /* altura da imagem */
+  perspective: 1000px; /* profundidade para o efeito 3D */
+  cursor: pointer;
+  margin: auto;
+  
+  
+  
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* esconde a parte que está virada para trás */
+  border-radius: 40%; /* manter o estilo arredondado da imagem */
+  overflow: hidden;
+  object-fit: cover;
+    object-position: center;
+  
+}
+
+.flip-card-front img, .flip-card-back img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
 
 .profile__present {
   color: var(--cor-padrão1);
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:var(--font-text1), 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 1em;
   width: 72%;
@@ -277,11 +356,12 @@ canvas {
   justify-content: center;
   margin-top: 40px;
   background-color: var(--cor-padrão2-trans);
-  padding: 5px;
+  padding: 10px;
   border: 1px solid gray;
   border-radius: 40px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  font-family:var(--font-contrast) ;
 }
 
 .profile__local--icon {
@@ -369,7 +449,7 @@ canvas {
 .slogan1__text {
   z-index: 3;
   font-size: 1.5em;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:var(--font-logo1), 'Courier New', Courier, monospace;
   text-align: center;
   width: 70%;
   margin: auto;
@@ -400,11 +480,19 @@ canvas {
   width: 85%;
   margin: auto;
   margin-top: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:var(--font-logo1), 'Courier New', Courier, monospace;
   color: var(--cor-padrão1);
   background-color: var(--cor-padrão2-trans);
   padding: 10px;
 
+}
+
+/*animação de gradient ifinito*/
+
+@keyframes gradientHover {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 100%; }
 }
 
 .about__tags {
@@ -412,6 +500,7 @@ canvas {
   margin-left: 30px;
   display: flex;
   flex-wrap: wrap; /* permite quebrar para a próxima linha */
+  font-family: var(--font-contrast);
 }
 
 .about__tags--card {
@@ -494,7 +583,7 @@ canvas {
 
 .projects__text {
   margin-top: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:var(--font-logo1), 'Courier New', Courier, monospace;
   text-align: center;
   color: var(--cor-padrão1);
   font-size: 1.2em;
@@ -515,7 +604,7 @@ canvas {
   border: 1px solid gray;
   border-radius: 10px;
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-logo1), 'Courier New', Courier, monospace;
   backdrop-filter: blur(10px); /* <- aqui está o efeito de desfoque */
    -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
    position: relative;
@@ -590,6 +679,7 @@ capa abandonada por enquanto
   background-color: var(--cor2-trans);
   color: white;
   padding: 5px;
+  font-family: var(--font-contrast)
 }
 
 .skills {
@@ -615,7 +705,7 @@ capa abandonada por enquanto
   text-align: center;
   margin: auto;
   margin-top: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-logo1), 'Courier New', Courier, monospace;
   color: var(--cor-padrão1);
 }
 
@@ -654,6 +744,7 @@ capa abandonada por enquanto
 
 .skill--name {
   color: var(--cor-padrão1);
+  font-family: var(--font-contrast);
 }
 
 .contact {
@@ -711,7 +802,7 @@ capa abandonada por enquanto
 }
 
 .contact__email--icon {
-  color: steelblue;
+  color: var(--cor2);
 }
 
 .contact__local--icon {
@@ -724,7 +815,7 @@ capa abandonada por enquanto
 
 .contact__name {
   color: var(--cor-padrão1);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:var(--font-text1), 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 0.7em;
   
 }
@@ -745,7 +836,7 @@ capa abandonada por enquanto
 
 .form__label {
   color: var(--cor-padrão1);
-  font-family: 'Courier New', Courier, monospace;
+  font-family:var(--font-logo1), 'Courier New', Courier, monospace;
   margin-top: 20px;
   margin-bottom: 6px;
 }
@@ -777,7 +868,8 @@ capa abandonada por enquanto
 }
 
 .f__camp::placeholder {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:var(--font-text1), 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--cor-form);
   
 }
 
@@ -806,8 +898,17 @@ footer {
     font-size: 2em;
   }
 
+  .profile {
+    height: 100vh;
+  }
+
   .profile__present {
     font-size: 1.5em;
+  }
+
+  .flip-card {
+    width: 200px;
+    height: 220px;
   }
 
   .about__text {
@@ -847,6 +948,10 @@ footer {
   }
 
   .contact__container {
+    width: 70%;
+  }
+
+  .contact__form {
     width: 70%;
   }
   
@@ -916,6 +1021,10 @@ footer {
 
 
 .contact__container {
+  width: 50%;
+}
+
+.contact__form {
   width: 50%;
 }
 
