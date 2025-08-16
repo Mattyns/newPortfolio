@@ -28,6 +28,7 @@
 
    <canvas id="canvas"></canvas>
    <canvas id="canvas2"></canvas>
+   <audio id="bg-music" src="music/lo-fi.mp3" loop></audio>
 
     <header class="header__container">
         <h1 class="header__title" id="typing"></h1>
@@ -35,6 +36,7 @@
             <a href="#"><i class="bi-github header--icon" data-github="Github"></i></a>
             <i class="bi-brightness-high header--icon" data-light="Modo Claro" id="toggle-theme"></i>
             <i class="bi-star-fill header--icon" id="toggle__button--star" data-effect="Desativar Efeito"></i>
+            <i class="bi-music-note-beamed header--icon" id="music-btn"></i>
         </nav>
     </header>
 
@@ -136,6 +138,24 @@
             <div class="projects__container">
 
                 <div class="project__card">
+                    <h1 class="project__title">Henrique Pontif</h1>
+                    <p class="project__text">Site responsivo criado para a venda de eBooks, com design estratégico voltado para conversão e navegação fluida em qualquer dispositivo.</p>
+                    <p class="project__date">20/07/2025</p>
+
+                    <!--talvez eu use depois
+                    
+                    <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
+                    <div class="project__container--img">
+                        
+                        <img src="img/project-henrique.jpg" alt="Projeto do site Henrique Pontif" class="project__img">
+                        <!-- ideia de capa abandonada por enquanto
+                        
+                        <div class="project__img--capa"></div> -->
+                    </div>
+                    <a href="https://mattyns.github.io/henriquep/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
+                </div>
+
+                <div class="project__card">
                     <h1 class="project__title">Morada Real</h1>
                     <p class="project__text">Site responsivo desenvolvido para uma empresa de imóveis, projetado para apresentar propriedades de forma clara, atraente e adaptável a qualquer dispositivo.</p>
                     <p class="project__date">12/07/2025</p>
@@ -145,12 +165,12 @@
                     <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
                     <div class="project__container--img">
                         
-                        <img src="img/project-moradareal.jpg" alt="Projeto do site Metalic" class="project__img">
+                        <img src="img/project-moradareal.jpg" alt="Projeto do site Morada Real" class="project__img">
                         <!-- ideia de capa abandonada por enquanto
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/moradareal/" class="project__link" target="blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
 
                 <div class="project__card">
@@ -168,7 +188,7 @@
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/Metalic/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
 
 
@@ -182,12 +202,13 @@
                     <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
                     <div class="project__container--img">
                         
+                        <p class="project__incomplete">Incompleto</p>
                         <img src="img/project-puccca.jpg" alt="Jogo da Memória simples" class="project__img">
                         <!-- ideia de capa abandonada por enquanto
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/Jogo-da-memoria-Pucca0.2/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
 
                 <div class="project__card">
@@ -205,7 +226,7 @@
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/portfolio1.2/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
 
                 <div class="project__card">
@@ -218,12 +239,13 @@
                     <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
                     <div class="project__container--img">
                         
+                        <p class="project__incomplete">Incompleto</p>
                         <img src="img/project-nail.jpg" alt="Projeto do site NailAnnie" class="project__img">
                         <!-- ideia de capa abandonada por enquanto
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/nailannie/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
 
                 <div class="project__card">
@@ -241,26 +263,68 @@
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/VivaFloresta/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
 
                 <div class="project__card">
-                    <h1 class="project__title">Metalic Security</h1>
-                    <p class="project__text">Site para uma empresa de segurança</p>
-                    <p class="project__date">10/01/2025</p>
+                    <h1 class="project__title">OSabor</h1>
+                    <p class="project__text">Landpage para um restaurante. Um dos meus primeiros trabalhos e por isso ainda é bem simples.</p>
+                    <p class="project__date">02/09/2024</p>
+
+                    <!--talvez eu use depois
+                    
+                    <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
+                    <div class="project__container--img">
+
+                        <p class="project__incomplete">Incompleto</p>
+                        <img src="img/project-Osabor.jpg" alt="Projeto do site Osabor" class="project__img">
+                        <!-- ideia de capa abandonada por enquanto
+                        
+                        <div class="project__img--capa"></div> -->
+                    </div>
+                    
+                    <a href="https://mattyns.github.io/Osabor/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
+                </div>
+
+                <div class="project__card">
+                    <h1 class="project__title">Hairbook</h1>
+                    <p class="project__text">Um site feito para recriar o design do facebook, apenas para fins de estudo. Versão de Pc ainda não está agradável</p>
+                    <p class="project__date">29/08/2024</p>
+
+                    <!--talvez eu use depois
+                    
+                    <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
+                    <div class="project__container--img">
+                        <p class="project__incomplete">Incompleto</p>
+                        <img src="img/project-hairbook.jpg" alt="Projeto do site Hairbook" class="project__img">
+                        
+                        <!-- ideia de capa abandonada por enquanto
+                        
+                        <div class="project__img--capa"></div> -->
+                    </div>
+                    
+                    <a href="https://mattyns.github.io/hairbook/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
+                </div>
+
+                <div class="project__card">
+                    <h1 class="project__title">Divina comédia</h1>
+                    <p class="project__text">Apenas um teste de background</p>
+                    <p class="project__date">04/04/2024</p>
 
                     <!--talvez eu use depois
                     
                     <div class="project__tags"><p class="project__tag">Responsivo</p><p class="project__tag"></p> </div>-->
                     <div class="project__container--img">
                         
-                        <img src="img/project--metalic.jpg" alt="Projeto do site Metalic" class="project__img">
+                        <img src="img/project-divina.jpg" alt="Projeto do site Divina Comédia" class="project__img">
                         <!-- ideia de capa abandonada por enquanto
                         
                         <div class="project__img--capa"></div> -->
                     </div>
-                    <a href="#" class="project__link"><button class="project__link--button">Ver Projeto</button></a>
+                    <a href="https://mattyns.github.io/divina/" class="project__link" target="_blank"><button class="project__link--button">Ver Projeto</button></a>
                 </div>
+
+
             </div>
             
         </section>
@@ -322,12 +386,14 @@
 
                 <div class="contact__card">
                     <i class="bi-github contact--icon contact__github--icon"></i>
-                    <p class="contact__name">https://github.com/Mattyns</p>
+                    <a href="https://github.com/Mattyns" target="_blank">
+                        <p class="contact__name">https://github.com/Mattyns</p>
+                    </a>
                 </div>
 
             </div>
 
-            <form class="contact__form">
+            <form class="contact__form" action="https://formsubmit.co/mathever7@gmail.com" method="POST">
                 <label for="f__name" class="form__label">Nome Completo</label>
                 <input type="text" name="f__name" id="f__name" class="f__camp" placeholder="Seu Nome" required>
 
@@ -349,12 +415,16 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>© 2025 Matheus Everton – Desenvolvedor Web</p>
+        <p>Aberto a novas oportunidades. <a href="mailto:mathever7@gmail.com">Entre em contato</a></p>
+    </footer>
 
 
     
 
     <script src="script/effect.js"></script>
+    <script src="script/music.js"></script>
     
 </body>
 </html>

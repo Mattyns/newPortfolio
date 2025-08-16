@@ -62,8 +62,17 @@
 
 }
 
+h1 {
+  cursor: default;
+}
+
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 ul {
@@ -218,6 +227,7 @@ i[data-effect]:hover::after {
     font-size: 4.5vw;
     font-family:var(--font-logo1), 'Courier New', Courier, monospace;
     color: white;
+    cursor: default;
 }
 
 .header__menu {
@@ -234,7 +244,12 @@ i[data-effect]:hover::after {
     margin: auto 10px;
     font-size: 1.2em;
     color: white;
+    cursor: pointer;
 
+}
+
+#music-btn {
+  color: gray;
 }
 
 
@@ -348,6 +363,7 @@ canvas {
   width: 72%;
   margin: auto;
   margin-top: 20px;
+  cursor: default;
   
   
 }
@@ -364,6 +380,7 @@ canvas {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-family:var(--font-contrast) ;
+  cursor: default;
 }
 
 .profile__local--icon {
@@ -450,6 +467,7 @@ canvas {
   height: 300px;
   display: flex;
   align-items: center;
+  cursor: default;
   
 }
 
@@ -508,6 +526,7 @@ canvas {
   display: flex;
   flex-wrap: wrap; /* permite quebrar para a próxima linha */
   font-family: var(--font-contrast);
+  cursor: default;
 }
 
 .about__tags--card {
@@ -521,6 +540,7 @@ canvas {
 
 .about__timeline {
   margin-top: 80px;
+  cursor: default;
 }
 
 .timeline__title {
@@ -615,6 +635,7 @@ canvas {
   backdrop-filter: blur(10px); /* <- aqui está o efeito de desfoque */
    -webkit-backdrop-filter: blur(10px); /* compatibilidade com Safari */
    position: relative;
+   cursor: default;
   
   
   
@@ -670,9 +691,21 @@ capa abandonada por enquanto
   border-radius: 10px;
 }
 
+.project__incomplete {
+  position: absolute;
+  background-color: brown;
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+  top: 83%;
+  border: 1px solid gray;
+  border-left: none;
+  border-right: none;
+  
+}
+
 .project__link {
   display: flex;
-  
   justify-content: center;
   margin: auto;
   margin-top: 20px;
@@ -680,13 +713,24 @@ capa abandonada por enquanto
   
 }
 
+
 .project__link--button {
   border: 1px solid white;
   border-radius: 8px;
   background-color: var(--cor2-trans);
   color: white;
   padding: 5px;
-  font-family: var(--font-contrast)
+  font-family: var(--font-contrast);
+  transition: padding 0.5s ease;
+  transition: background 1s ease;
+  transition-delay: 500ms;
+}
+
+.project__link--button:hover {
+  padding: 10px;
+  background-color: var(--cor2);
+  transition: padding 1s ease;
+  transition: background 1.5s ease;
 }
 
 .skills {
@@ -723,6 +767,7 @@ capa abandonada por enquanto
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center; /* combina justify-items e align-items */
+  cursor: default;
   
   
 }
@@ -827,6 +872,10 @@ capa abandonada por enquanto
   
 }
 
+.contact__name:hover {
+  text-decoration: underline;
+}
+
 .contact__form {
   width: 80%;
   display: flex;
@@ -896,6 +945,21 @@ capa abandonada por enquanto
 footer {
   height: 20vh;
   background-color: var(--cor-padrão2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > p {
+  color: var(--cor-padrão1);
+  font-family: var(--font-text1);
+  
+  
+}
+
+footer a {
+  color: var(--cor2);
 }
 
 
