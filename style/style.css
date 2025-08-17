@@ -869,6 +869,7 @@ capa abandonada por enquanto
   color: var(--cor-padrão1);
   font-family:var(--font-text1), 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 0.7em;
+  cursor: pointer;
   
 }
 

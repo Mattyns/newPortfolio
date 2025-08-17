@@ -253,12 +253,12 @@ toggleIcon.addEventListener('click', () => {
 
   // Atualiza o ícone e o title conforme o tema
   if (body.classList.contains('dark-theme')) {
-    toggleIcon.classList.remove('bi-brightness-high'); // remove ícone sol
-    toggleIcon.classList.add('bi-moon');               // adiciona ícone lua
+    toggleIcon.classList.remove('bi-moon'); // remove ícone sol
+    toggleIcon.classList.add('bi-brightness-high');               // adiciona ícone lua
     
   } else {
-    toggleIcon.classList.remove('bi-moon');            // remove ícone lua
-    toggleIcon.classList.add('bi-brightness-high');    // adiciona ícone sol
+    toggleIcon.classList.remove('bi-brightness-high');            // remove ícone lua
+    toggleIcon.classList.add('bi-moon');    // adiciona ícone sol
     
   }
 
@@ -274,12 +274,12 @@ toggleIcon.addEventListener('click', () => {
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-theme');
-    toggleIcon.classList.remove('bi-brightness-high');
-    toggleIcon.classList.add('bi-moon');
-    toggleIcon.setAttribute('title', toggleIcon.dataset.dark);
-  } else {
     toggleIcon.classList.remove('bi-moon');
     toggleIcon.classList.add('bi-brightness-high');
+    toggleIcon.setAttribute('title', toggleIcon.dataset.dark);
+  } else {
+    toggleIcon.classList.remove('bi-brightness-high');
+    toggleIcon.classList.add('bi-moon');
     toggleIcon.setAttribute('title', toggleIcon.dataset.light);
   }
 });
